@@ -23,7 +23,9 @@ h3 {
   z-index: 1;
   background-color: hsl(0, 0%, 7%);
 }
-
+  #defaultCanvas0 {
+    width: 100%
+  }
 
 #title {
   font-size: 15vw;
@@ -37,6 +39,11 @@ h3 {
 
 #desc {
   font-size: 2vw;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
 
 p {
@@ -74,6 +81,10 @@ p {
   transition: all .5s;
 }
 
+
+canvas {
+  margin-bottom: 4vw;
+}
 
 #main {
   -webkit-transform: rotateY(0deg) translateZ(-50vh);

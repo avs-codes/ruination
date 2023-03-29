@@ -192,6 +192,8 @@ function draw() {
   console.log("run time: ", endTime - startTime);
 }
 
+
+
 function createComposition(topX, botX, topY, botY, InputSidelength, recurse, translateX, translateY, translateZ) {
   let compositionDecision = random();
   let vertDispScalar = random() * 32 + 40
