@@ -1,0 +1,121 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: cornsilk;
+  background-color: hsl(0, 0%, 7%);
+  margin: 0;
+}
+
+.scene {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  -webkit-perspective: 2500px;
+  perspective: 3500px;
+}
+
+h3 {
+  
+  width: 100%;
+  font-weight: 300;
+  top: 20px;
+  left: 80px;
+  z-index: 1;
+  background-color: hsl(0, 0%, 7%);
+}
+
+
+#title {
+  font-size: 15vw;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 0.5;
+  margin-top: 4vw;
+  margin-bottom: 8vw;
+  text-align: left;
+}
+
+#desc {
+  font-size: 2vw;
+}
+
+p {
+  font-size: 40px;
+}
+
+/* .scene {
+  -webkit-transition: all easing’s Bezier curve .6s;
+  transition: all easing’s Bezier curve .6s;
+  -webkit-animation: perspective-in 1s;
+  animation: perspective-in 1s;
+} */
+
+.cube {
+  position: fixed;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-100px);
+  transform: translateZ(-100px);
+}
+
+.cube__face {
+  border-color: #f24a3c;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 5vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-repeat: repeat;
+  background-size: 2vw 2vw;
+  border: 2px solid cornsilk;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+
+#main {
+  -webkit-transform: rotateY(0deg) translateZ(-50vh);
+  transform: rotateY(0deg) translateZ(-50vh);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-width: 1px;
+  padding-left: 25vh;
+  padding-right: 35vh;
+}
+
+#main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3vw;
+}
+
+img {
+  width: 100%;
+}
+
+article {
+  width: 100%;
+}
+
+.half-width {
+  width: 45%;
+}
+
+.half-width p {
+  font-size: 25px;
+}
+
+#top {
+  -webkit-transform: rotateX(-90deg) translateZ(-50vh);
+  transform: rotateX(-90deg) translateZ(-50vh);
+  overflow: hidden;
+}
+
+#bottom {
+  -webkit-transform: rotateX(90deg) translateZ(-50vh);
+  transform: rotateX(90deg) translateZ(-50vh);
+  overflow: hidden;
+}
