@@ -7,7 +7,7 @@ for (let i = 1; i < 51; i++) {
     <img src='/media/${i}.png'>
     <p>${i}</p>
   `
-  if (i > 10) {
+  if (i > 8) {
     currentPost.classList.add('half-width')
   }
   mainContainer.appendChild(currentPost);
