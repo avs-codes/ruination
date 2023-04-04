@@ -5,7 +5,7 @@ for (let i = 1; i < 51; i++) {
   let currentPost = document.createElement('article');
 
   currentPost.innerHTML = `
-    <img src='/media/${i}.png'>
+    <img src='media/${i}.png'>
     <p>${i}</p>
   `
   if (i > 8) {

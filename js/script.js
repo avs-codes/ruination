@@ -13,9 +13,9 @@ class Cube {
     this.r = r;
     this.z = z;
     this.hue = hue ;
-    this.satur = 18;
+    this.satur = 12;
     if (this.hue > 210 && this.hue < 300) {
-      this.satur = 28;
+      this.satur = 15;
     }
     if (fillMode < 0.33){
     //white mode
@@ -39,7 +39,7 @@ class Cube {
       }
     } else if (fillMode <= 1) {
     //color mode
-      this.light = 52 - (vertDisplace/2.5);
+      this.light = 51 - (vertDisplace/2.5);
       if (strokeMode < 0.5) {
         this.weight = 3;
         this.strokeColor = 3
@@ -181,7 +181,7 @@ function draw() {
   if (fillMode > 0.66 && fillMode <= 1) {
     background(hue, 10, 52);
     if (hue > 210 && hue < 300) {
-      background(hue, 28, 52);
+      background(hue, 17, 52);
     }
   }
   let startTime
