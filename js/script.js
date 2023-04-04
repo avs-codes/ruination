@@ -1,11 +1,51 @@
 let gridTopX;
 let gridTopY;
-let sideLength = 35;
-let fixedLength = 1;
-let fillMode = Math.random();
-let strokeMode = Math.random();
-let hue = Math.random()*360 ;
-let useVertDisplace = Math.random();
+let sideLength;
+let fixedLength;
+let fillMode;
+let strokeMode;
+let hue;
+let useVertDisplace;
+
+function setup() {
+  createCanvas(1000, 1000);
+  pixelDensity(2.0)
+  gridTopX = width / 2;
+  gridTopY = height / 2;
+  noLoop();
+  colorMode(HSL);
+}
+
+function draw() {
+  document.getElementById('script_btn').onclick = function () {
+
+    sideLength = 35;
+    fixedLength = 1;
+    fillMode = Math.random();
+    strokeMode = Math.random();
+    hue = Math.random()*360 ;
+    useVertDisplace = Math.random();
+  background(0, 0, 5);
+  if (fillMode < 0.33) {
+    background(0, 0, 80);
+  }
+  if (fillMode > 0.66 && fillMode <= 1) {
+    background(hue, 10, 52);
+    if (hue > 210 && hue < 300) {
+      background(hue, 17, 52);
+    }
+  }
+  let startTime
+  let endTime
+  startTime = performance.now();
+  
+
+  createComposition(10, -10, -10, 10, 20, 2, 0, 0, 0)
+  
+  endTime = performance.now();
+  console.log("run time: ", endTime - startTime);
+  };
+}
 
 class Cube {
   constructor(c, r, z, type, weight, timeMod, vertDisplace) {
@@ -164,36 +204,6 @@ class Cube {
   }
 }
 
-function setup() {
-  createCanvas(1000, 1000);
-  pixelDensity(2.0)
-  gridTopX = width / 2;
-  gridTopY = height / 2;
-  noLoop();
-  colorMode(HSL);
-}
-
-function draw() {
-  background(0, 0, 5);
-  if (fillMode < 0.33) {
-    background(0, 0, 80);
-  }
-  if (fillMode > 0.66 && fillMode <= 1) {
-    background(hue, 10, 52);
-    if (hue > 210 && hue < 300) {
-      background(hue, 17, 52);
-    }
-  }
-  let startTime
-  let endTime
-  startTime = performance.now();
-  createComposition(10, -10, -10, 10, 20, 2, 0, 0, 0)
-  endTime = performance.now();
-  console.log("run time: ", endTime - startTime);
-}
-
-
-
 function createComposition(topX, botX, topY, botY, InputSidelength, recurse, translateX, translateY, translateZ) {
   let compositionDecision = random();
   let vertDispScalar = random() * 32 + 40
@@ -295,9 +305,6 @@ function chooseOpMode(decision, xInfluence, yInfluence) {
   } 
 
 }
-
-
-
 
 
 
